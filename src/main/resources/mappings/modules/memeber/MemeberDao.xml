@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thinkgem.jeesite.modules.memeber.dao.MemeberDao">
+    
+	<sql id="memeberColumns">
+		a.id AS "id",
+		a.mobile AS "mobile",
+		a.nick_name AS "nickName",
+		a.type AS "type",
+		a.source AS "source",
+		a.head_image_url AS "headImageUrl",
+		a.channel_id AS "channelId",
+		a.channel_name AS "channelName",
+		a.recommend_uid AS "recommendUid",
+		a.score AS "score",
+		a.gold AS "gold",
+		a.vip_time AS "vipTime",
+		a.created AS "created"
+	</sql>
+	
+	<sql id="memeberJoins">
+	</sql>
+    
+	<select id="get" resultType="Memeber">
+		SELECT 
+			<include refid="memeberColumns"/>
+		FROM td_memeber a
+		<include refid="memeberJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="Memeber">
+		SELECT 
+			<include refid="memeberColumns"/>
+		FROM td_memeber a
+		<include refid="memeberJoins"/>
+		<where>
+			
+			<if test="mobile != null and mobile != ''">
+				AND a.mobile = #{mobile}
+			</if>
+			<if test="nickName != null and nickName != ''">
+				AND a.nick_name = #{nickName}
+			</if>
+			<if test="source != null and source != ''">
+				AND a.source = #{source}
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="Memeber">
+		SELECT 
+			<include refid="memeberColumns"/>
+		FROM td_memeber a
+		<include refid="memeberJoins"/>
+		<where>
+			
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO td_memeber(
+			id,
+			mobile,
+			nick_name,
+			type,
+			source,
+			head_image_url,
+			channel_id,
+			channel_name,
+			recommend_uid,
+			score,
+			gold,
+			vip_time,
+			created
+		) VALUES (
+			#{id},
+			#{mobile},
+			#{nickName},
+			#{type},
+			#{source},
+			#{headImageUrl},
+			#{channelId},
+			#{channelName},
+			#{recommendUid},
+			#{score},
+			#{gold},
+			#{vipTime},
+			#{created}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE td_memeber SET 	
+			mobile = #{mobile},
+			nick_name = #{nickName},
+			type = #{type},
+			source = #{source},
+			head_image_url = #{headImageUrl},
+			channel_id = #{channelId},
+			channel_name = #{channelName},
+			recommend_uid = #{recommendUid},
+			score = #{score},
+			gold = #{gold},
+			vip_time = #{vipTime},
+			created = #{created}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		DELETE FROM td_memeber
+		WHERE id = #{id}
+	</update>
+	
+</mapper>
