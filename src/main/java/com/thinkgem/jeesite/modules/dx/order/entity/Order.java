@@ -3,13 +3,15 @@
  */
 package com.thinkgem.jeesite.modules.dx.order.entity;
 
-import org.hibernate.validator.constraints.Length;
-import com.thinkgem.jeesite.modules.memeber.entity.Memeber;
 import java.util.Date;
-import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.Length;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.thinkgem.jeesite.common.persistence.DataEntity;
+import com.thinkgem.jeesite.modules.dx.memeber.entity.Memeber;
 
 /**
  * 订单信息（充值）Entity
