@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thinkgem.jeesite.modules.dx.module.dao.ModuleDao">
+    
+	<sql id="moduleColumns">
+		a.id AS "id",
+		a.module_name AS "moduleName",
+		a.module_image_url AS "moduleImageUrl",
+		a.isview AS "isview",
+		a.created AS "created"
+	</sql>
+	
+	<sql id="moduleJoins">
+	</sql>
+    
+	<select id="get" resultType="Module">
+		SELECT 
+			<include refid="moduleColumns"/>
+		FROM tc_module a
+		<include refid="moduleJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="Module">
+		SELECT 
+			<include refid="moduleColumns"/>
+		FROM tc_module a
+		<include refid="moduleJoins"/>
+		<where>
+			
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="Module">
+		SELECT 
+			<include refid="moduleColumns"/>
+		FROM tc_module a
+		<include refid="moduleJoins"/>
+		<where>
+			
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO tc_module(
+			id,
+			module_name,
+			module_image_url,
+			isview,
+			created
+		) VALUES (
+			#{id},
+			#{moduleName},
+			#{moduleImageUrl},
+			#{isview},
+			#{created}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE tc_module SET 	
+			module_name = #{moduleName},
+			module_image_url = #{moduleImageUrl},
+			isview = #{isview},
+			created = #{created}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		DELETE FROM tc_module
+		WHERE id = #{id}
+	</update>
+	
+</mapper>
