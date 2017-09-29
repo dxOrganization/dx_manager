@@ -47,6 +47,26 @@ public abstract class DataEntity<T> extends BaseEntity<T> {
 		// 不限制ID为UUID，调用setIsNewRecord()使用自定义ID
 		if (!this.isNewRecord){
 			setId(IdGen.uuid());
+			//setIsNewRecord(true);
+		}
+		User user = UserUtils.getUser();
+		if (StringUtils.isNotBlank(user.getId())){
+			this.updateBy = user;
+			this.createBy = user;
+		}
+		this.updateDate = new Date();
+		this.createDate = this.updateDate;
+	}
+	
+	/**
+	 * 自增插入之前执行方法，需要手动调用
+	 */
+	@Override
+	public void preAutoInsert(){
+		// 不限制ID为UUID，调用setIsNewRecord()使用自定义ID
+		if (!this.isNewRecord){
+//			setId(IdGen.uuid());
+			setIsNewRecord(true);
 		}
 		User user = UserUtils.getUser();
 		if (StringUtils.isNotBlank(user.getId())){
