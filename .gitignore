@@ -68,7 +68,6 @@ local.properties
 ## .gitignore for intellij
 *.iml
 *.ipr
-*.iws
 .idea/
 ## .gitignore for linux
 .*
