@@ -33,7 +33,7 @@ target/
 /web-app/plugins
 /web-app/WEB-INF/classes
 # "temporary" build files
-target/
+
 out/
 # other
 *.iws
@@ -94,5 +94,4 @@ Icon
 .Trashes
 *_copy.html
 *_copy.htm
-*_copy.html
 *.pdb
