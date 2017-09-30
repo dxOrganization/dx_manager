@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/views/include/taglib.jsp"%>
 <html>
 <head>
-	<title>会议投诉建议管理</title>
+	<title>会员投诉建议管理</title>
 	<meta name="decorator" content="default"/>
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -18,8 +18,8 @@
 </head>
 <body>
 	<ul class="nav nav-tabs">
-		<li class="active"><a href="${ctx}/complaint/complaint/">会议投诉建议列表</a></li>
-		<shiro:hasPermission name="complaint:complaint:edit"><li><a href="${ctx}/complaint/complaint/form">会议投诉建议添加</a></li></shiro:hasPermission>
+		<li class="active"><a href="${ctx}/complaint/complaint/">会员投诉建议列表</a></li>
+		
 	</ul>
 	<form:form id="searchForm" modelAttribute="complaint" action="${ctx}/complaint/complaint/" method="post" class="breadcrumb form-search">
 		<input id="pageNo" name="pageNo" type="hidden" value="${page.pageNo}"/>
@@ -60,7 +60,7 @@
 				</td>
 				<shiro:hasPermission name="complaint:complaint:edit"><td>
     				<a href="${ctx}/complaint/complaint/form?id=${complaint.id}">修改</a>
-					<a href="${ctx}/complaint/complaint/delete?id=${complaint.id}" onclick="return confirmx('确认要删除该会议投诉建议吗？', this.href)">删除</a>
+					<a href="${ctx}/complaint/complaint/delete?id=${complaint.id}" onclick="return confirmx('确认要删除该会员投诉建议吗？', this.href)">删除</a>
 				</td></shiro:hasPermission>
 			</tr>
 		</c:forEach>
