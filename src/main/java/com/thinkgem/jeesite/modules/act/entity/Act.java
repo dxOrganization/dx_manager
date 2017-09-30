@@ -375,6 +375,11 @@ public class Act extends BaseEntity<Act> {
 	}
 
 	@Override
+	public void preAutoInsert() {
+
+	}
+
+	@Override
 	public void preUpdate() {
 		
 	}

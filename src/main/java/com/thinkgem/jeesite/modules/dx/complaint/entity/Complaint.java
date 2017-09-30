@@ -3,7 +3,7 @@
  */
 package com.thinkgem.jeesite.modules.dx.complaint.entity;
 
-import com.thinkgem.jeesite.modules.memeber.entity.Memeber;
+import com.thinkgem.jeesite.modules.dx.memeber.entity.Memeber;
 import org.hibernate.validator.constraints.Length;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;

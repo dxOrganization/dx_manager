@@ -3,9 +3,9 @@
  */
 package com.thinkgem.jeesite.modules.dx.paymentlog.entity;
 
-import com.thinkgem.jeesite.modules.memeber.entity.Memeber;
+import com.thinkgem.jeesite.modules.dx.memeber.entity.Memeber;
 import org.hibernate.validator.constraints.Length;
-import com.thinkgem.jeesite.modules.room.entity.Room;
+import com.thinkgem.jeesite.modules.dx.room.entity.Room;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
