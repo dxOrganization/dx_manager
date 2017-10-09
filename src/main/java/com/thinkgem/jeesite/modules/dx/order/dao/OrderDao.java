@@ -10,7 +10,7 @@ import com.thinkgem.jeesite.modules.dx.order.entity.Order;
 /**
  * 订单信息（充值）DAO接口
  * @author mzh143
- * @version 2017-10-09
+ * @version 2017-10-10
  */
 @MyBatisDao
 public interface OrderDao extends CrudDao<Order> {

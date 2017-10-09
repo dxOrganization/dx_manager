@@ -6,6 +6,7 @@
 		a.id AS "id",
 		a.room_name AS "roomName",
 		a.head_image_url AS "headImageUrl",
+		a.room_code AS "roomCode",
 		a.image_url AS "imageUrl",
 		a.type AS "type",
 		a.status AS "status",
@@ -13,7 +14,9 @@
 		a.city AS "city",
 		a.video_url AS "videoUrl",
 		a.module_id AS "moduleId",
-		a.created AS "created"
+		a.created AS "created",
+		a.module_code AS "moduleCode",
+		a.module_name AS "moduleName"
 	</sql>
 	
 	<sql id="roomJoins">
@@ -42,6 +45,9 @@
 			</if>
 			<if test="city != null and city != ''">
 				AND a.city = #{city}
+			</if>
+			<if test="moduleName != null and moduleName != ''">
+				AND a.module_name = #{moduleName}
 			</if>
 		</where>
 		<choose>
@@ -75,6 +81,7 @@
 			id,
 			room_name,
 			head_image_url,
+			room_code,
 			image_url,
 			type,
 			status,
@@ -82,11 +89,14 @@
 			city,
 			video_url,
 			module_id,
-			created
+			created,
+			module_code,
+			module_name
 		) VALUES (
 			#{id},
 			#{roomName},
 			#{headImageUrl},
+			#{roomCode},
 			#{imageUrl},
 			#{type},
 			#{status},
@@ -94,7 +104,9 @@
 			#{city},
 			#{videoUrl},
 			#{moduleId},
-			#{created}
+			#{created},
+			#{moduleCode},
+			#{moduleName}
 		)
 	</insert>
 	
@@ -102,6 +114,7 @@
 		UPDATE tc_room SET 	
 			room_name = #{roomName},
 			head_image_url = #{headImageUrl},
+			room_code = #{roomCode},
 			image_url = #{imageUrl},
 			type = #{type},
 			status = #{status},
@@ -109,7 +122,9 @@
 			city = #{city},
 			video_url = #{videoUrl},
 			module_id = #{moduleId},
-			created = #{created}
+			created = #{created},
+			module_code = #{moduleCode},
+			module_name = #{moduleName}
 		WHERE id = #{id}
 	</update>
 	

@@ -16,7 +16,7 @@ import com.thinkgem.jeesite.modules.dx.basic.dao.BasicDao;
 /**
  * 基础设置Service
  * @author mzh143
- * @version 2017-10-09
+ * @version 2017-10-10
  */
 @Service
 @Transactional(readOnly = true)

@@ -66,7 +66,7 @@
 		<div class="control-group">
 			<label class="control-label">渠道：</label>
 			<div class="controls">
-				<form:input path="channelId" htmlEscape="false" maxlength="20" class="input-xlarge  digits"/>
+				<form:input path="channelId" htmlEscape="false" maxlength="20" class="input-xlarge "/>
 			</div>
 		</div>
 		<div class="control-group">

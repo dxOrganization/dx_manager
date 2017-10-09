@@ -46,6 +46,12 @@
 			</div>
 		</div>
 		<div class="control-group">
+			<label class="control-label">房间编码：</label>
+			<div class="controls">
+				<form:input path="roomCode" htmlEscape="false" maxlength="20" class="input-xlarge "/>
+			</div>
+		</div>
+		<div class="control-group">
 			<label class="control-label">直播间展示图片：</label>
 			<div class="controls">
 				<form:input path="imageUrl" htmlEscape="false" maxlength="200" class="input-xlarge "/>
@@ -84,7 +90,7 @@
 		<div class="control-group">
 			<label class="control-label">直播间所属版块ID：</label>
 			<div class="controls">
-				<form:input path="moduleId" htmlEscape="false" maxlength="20" class="input-xlarge  digits"/>
+				<form:input path="moduleId" htmlEscape="false" maxlength="20" class="input-xlarge "/>
 			</div>
 		</div>
 		<div class="control-group">
@@ -94,6 +100,18 @@
 					value="<fmt:formatDate value="${room.created}" pattern="yyyy-MM-dd HH:mm:ss"/>"
 					onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',isShowClear:false});"/>
 				<span class="help-inline"><font color="red">*</font> </span>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">模块代码：</label>
+			<div class="controls">
+				<form:input path="moduleCode" htmlEscape="false" maxlength="20" class="input-xlarge "/>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">模块名称：</label>
+			<div class="controls">
+				<form:input path="moduleName" htmlEscape="false" maxlength="200" class="input-xlarge "/>
 			</div>
 		</div>
 		<div class="form-actions">

@@ -16,7 +16,7 @@ import com.thinkgem.jeesite.modules.dx.memeber.dao.MemeberDao;
 /**
  * 会员信息Service
  * @author mzh143
- * @version 2017-10-09
+ * @version 2017-10-10
  */
 @Service
 @Transactional(readOnly = true)

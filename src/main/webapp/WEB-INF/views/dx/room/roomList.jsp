@@ -34,6 +34,9 @@
 			<li><label>直播间所在城市：</label>
 				<form:input path="city" htmlEscape="false" maxlength="60" class="input-medium"/>
 			</li>
+			<li><label>模块名称：</label>
+				<form:input path="moduleName" htmlEscape="false" maxlength="200" class="input-medium"/>
+			</li>
 			<li class="btns"><input id="btnSubmit" class="btn btn-primary" type="submit" value="查询"/></li>
 			<li class="clearfix"></li>
 		</ul>
@@ -43,6 +46,7 @@
 		<thead>
 			<tr>
 				<th>直播间名称</th>
+				<th>房间编码</th>
 				<th>直播间类型名称</th>
 				<th>直播间状态</th>
 				<th>进入直播间消耗金币数量</th>
@@ -50,6 +54,8 @@
 				<th>直播间视频URL</th>
 				<th>直播间所属版块ID</th>
 				<th>创建时间</th>
+				<th>模块代码</th>
+				<th>模块名称</th>
 				<shiro:hasPermission name="room:room:edit"><th>操作</th></shiro:hasPermission>
 			</tr>
 		</thead>
@@ -59,6 +65,9 @@
 				<td><a href="${ctx}/room/room/form?id=${room.id}">
 					${room.roomName}
 				</a></td>
+				<td>
+					${room.roomCode}
+				</td>
 				<td>
 					${room.type}
 				</td>
@@ -79,6 +88,12 @@
 				</td>
 				<td>
 					<fmt:formatDate value="${room.created}" pattern="yyyy-MM-dd HH:mm:ss"/>
+				</td>
+				<td>
+					${room.moduleCode}
+				</td>
+				<td>
+					${room.moduleName}
 				</td>
 				<shiro:hasPermission name="room:room:edit"><td>
     				<a href="${ctx}/room/room/form?id=${room.id}">修改</a>

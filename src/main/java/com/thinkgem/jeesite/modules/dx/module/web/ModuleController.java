@@ -25,7 +25,7 @@ import com.thinkgem.jeesite.modules.dx.module.service.ModuleService;
 /**
  * 版块信息维护Controller
  * @author mzh143
- * @version 2017-10-09
+ * @version 2017-10-10
  */
 @Controller
 @RequestMapping(value = "${adminPath}/module/module")
