@@ -27,6 +27,9 @@
 		<include refid="channelJoins"/>
 		<where>
 			
+			<if test="channelName != null and channelName != ''">
+				AND a.channel_name = #{channelName}
+			</if>
 		</where>
 		<choose>
 			<when test="page !=null and page.orderBy != null and page.orderBy != ''">

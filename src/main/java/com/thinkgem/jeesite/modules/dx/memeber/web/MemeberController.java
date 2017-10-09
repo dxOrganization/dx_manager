@@ -25,7 +25,7 @@ import com.thinkgem.jeesite.modules.dx.memeber.service.MemeberService;
 /**
  * 会员信息Controller
  * @author mzh143
- * @version 2017-09-25
+ * @version 2017-10-09
  */
 @Controller
 @RequestMapping(value = "${adminPath}/memeber/memeber")

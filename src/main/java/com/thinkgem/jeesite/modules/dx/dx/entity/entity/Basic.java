@@ -1,15 +1,15 @@
 /**
  * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
  */
-package com.thinkgem.jeesite.modules.dx.basic.entity;
+package com.thinkgem.jeesite.modules.dx.dx.entity.entity;
 
 import org.hibernate.validator.constraints.Length;
 
 import com.thinkgem.jeesite.common.persistence.DataEntity;
 
 /**
- * 基础设置Entity
- * @author mzh143
+ * 单表生成Entity
+ * @author ThinkGem
  * @version 2017-10-09
  */
 public class Basic extends DataEntity<Basic> {

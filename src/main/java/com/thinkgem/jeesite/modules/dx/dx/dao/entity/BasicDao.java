@@ -1,18 +1,18 @@
 /**
  * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
  */
-package com.thinkgem.jeesite.modules.dx.complaint.dao;
+package com.thinkgem.jeesite.modules.dx.dx.dao.entity;
 
 import com.thinkgem.jeesite.common.persistence.CrudDao;
 import com.thinkgem.jeesite.common.persistence.annotation.MyBatisDao;
-import com.thinkgem.jeesite.modules.dx.complaint.entity.Complaint;
+import com.thinkgem.jeesite.modules.dx.dx.entity.entity.Basic;
 
 /**
- * 会议投诉建议DAO接口
- * @author mzh143
+ * 单表生成DAO接口
+ * @author ThinkGem
  * @version 2017-10-09
  */
 @MyBatisDao
-public interface ComplaintDao extends CrudDao<Complaint> {
+public interface BasicDao extends CrudDao<Basic> {
 	
 }

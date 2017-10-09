@@ -1,7 +1,7 @@
 /**
  * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
  */
-package com.thinkgem.jeesite.modules.dx.basic.service;
+package com.thinkgem.jeesite.modules.dx.dx.service.entity;
 
 import java.util.List;
 
@@ -10,12 +10,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.thinkgem.jeesite.common.persistence.Page;
 import com.thinkgem.jeesite.common.service.CrudService;
-import com.thinkgem.jeesite.modules.dx.basic.entity.Basic;
-import com.thinkgem.jeesite.modules.dx.basic.dao.BasicDao;
+import com.thinkgem.jeesite.modules.dx.dx.entity.entity.Basic;
+import com.thinkgem.jeesite.modules.dx.dx.dao.entity.BasicDao;
 
 /**
- * 基础设置Service
- * @author mzh143
+ * 单表生成Service
+ * @author ThinkGem
  * @version 2017-10-09
  */
 @Service
