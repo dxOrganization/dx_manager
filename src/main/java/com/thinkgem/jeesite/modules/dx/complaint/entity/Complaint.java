@@ -13,7 +13,7 @@ import com.thinkgem.jeesite.common.persistence.DataEntity;
 /**
  * 会议投诉建议Entity
  * @author mzh143
- * @version 2017-09-25
+ * @version 2017-10-09
  */
 public class Complaint extends DataEntity<Complaint> {
 	

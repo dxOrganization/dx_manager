@@ -25,7 +25,7 @@ import com.thinkgem.jeesite.modules.dx.complaint.service.ComplaintService;
 /**
  * 会议投诉建议Controller
  * @author mzh143
- * @version 2017-09-25
+ * @version 2017-10-09
  */
 @Controller
 @RequestMapping(value = "${adminPath}/complaint/complaint")

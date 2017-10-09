@@ -10,7 +10,7 @@ import com.thinkgem.jeesite.modules.dx.paymentlog.entity.PaymentLog;
 /**
  * 会员消费记录DAO接口
  * @author mzh143
- * @version 2017-09-25
+ * @version 2017-10-09
  */
 @MyBatisDao
 public interface PaymentLogDao extends CrudDao<PaymentLog> {

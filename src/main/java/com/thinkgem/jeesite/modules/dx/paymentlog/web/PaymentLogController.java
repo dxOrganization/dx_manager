@@ -25,7 +25,7 @@ import com.thinkgem.jeesite.modules.dx.paymentlog.service.PaymentLogService;
 /**
  * 会员消费记录Controller
  * @author mzh143
- * @version 2017-09-25
+ * @version 2017-10-09
  */
 @Controller
 @RequestMapping(value = "${adminPath}/paymentlog/paymentLog")
