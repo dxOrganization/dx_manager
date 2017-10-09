@@ -43,6 +43,9 @@
 			<if test="city != null and city != ''">
 				AND a.city = #{city}
 			</if>
+			<if test="moduleId != null and moduleId != ''">
+				AND a.module_id = #{moduleId}
+			</if>
 		</where>
 		<choose>
 			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
