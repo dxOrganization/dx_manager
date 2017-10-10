@@ -10,7 +10,7 @@ import com.thinkgem.jeesite.modules.dx.basic.entity.Basic;
 /**
  * 基础设置DAO接口
  * @author mzh143
- * @version 2017-10-09
+ * @version 2017-10-10
  */
 @MyBatisDao
 public interface BasicDao extends CrudDao<Basic> {

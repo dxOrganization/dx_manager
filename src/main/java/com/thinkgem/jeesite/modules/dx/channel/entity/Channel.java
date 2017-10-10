@@ -12,7 +12,7 @@ import com.thinkgem.jeesite.common.persistence.DataEntity;
 /**
  * 渠道信息Entity
  * @author mzh143
- * @version 2017-10-09
+ * @version 2017-10-10
  */
 public class Channel extends DataEntity<Channel> {
 	

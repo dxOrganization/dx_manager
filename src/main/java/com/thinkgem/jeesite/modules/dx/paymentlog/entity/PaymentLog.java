@@ -3,9 +3,7 @@
  */
 package com.thinkgem.jeesite.modules.dx.paymentlog.entity;
 
-import com.thinkgem.jeesite.modules.dx.memeber.entity.Memeber;
 import org.hibernate.validator.constraints.Length;
-import com.thinkgem.jeesite.modules.dx.room.entity.Room;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -14,14 +12,14 @@ import com.thinkgem.jeesite.common.persistence.DataEntity;
 /**
  * 会员消费记录Entity
  * @author mzh143
- * @version 2017-10-09
+ * @version 2017-10-10
  */
 public class PaymentLog extends DataEntity<PaymentLog> {
 	
 	private static final long serialVersionUID = 1L;
-	private Memeber memberId;		// 用户
+	private String memberId;		// 用户
 	private String type;		// 消费类型
-	private Room roomId;		// 直播间
+	private String roomId;		// 直播间
 	private String payment;		// 消费金币数量
 	private Date created;		// 创建时间
 	
@@ -33,11 +31,12 @@ public class PaymentLog extends DataEntity<PaymentLog> {
 		super(id);
 	}
 
-	public Memeber getMemberId() {
+	@Length(min=0, max=20, message="用户长度必须介于 0 和 20 之间")
+	public String getMemberId() {
 		return memberId;
 	}
 
-	public void setMemberId(Memeber memberId) {
+	public void setMemberId(String memberId) {
 		this.memberId = memberId;
 	}
 	
@@ -50,11 +49,12 @@ public class PaymentLog extends DataEntity<PaymentLog> {
 		this.type = type;
 	}
 	
-	public Room getRoomId() {
+	@Length(min=0, max=20, message="直播间长度必须介于 0 和 20 之间")
+	public String getRoomId() {
 		return roomId;
 	}
 
-	public void setRoomId(Room roomId) {
+	public void setRoomId(String roomId) {
 		this.roomId = roomId;
 	}
 	

@@ -28,6 +28,9 @@
 		<include refid="moduleJoins"/>
 		<where>
 			
+			<if test="moduleName != null and moduleName != ''">
+				AND a.module_name = #{moduleName}
+			</if>
 		</where>
 		<choose>
 			<when test="page !=null and page.orderBy != null and page.orderBy != ''">

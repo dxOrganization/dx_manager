@@ -13,21 +13,24 @@ import com.thinkgem.jeesite.common.persistence.DataEntity;
 /**
  * 直播间Entity
  * @author mzh143
- * @version 2017-10-09
+ * @version 2017-10-10
  */
 public class Room extends DataEntity<Room> {
 	
 	private static final long serialVersionUID = 1L;
 	private String roomName;		// 直播间名称
 	private String headImageUrl;		// 直播间头像图片
+	private String roomCode;		// 房间编码
 	private String imageUrl;		// 直播间展示图片
 	private String type;		// 直播间类型名称
 	private String status;		// 直播间状态
 	private String payment;		// 进入直播间消耗金币数量
 	private String city;		// 直播间所在城市
 	private String videoUrl;		// 直播间视频URL
-	private Long moduleId;		// 直播间所属版块ID
+	private String moduleId;		// 直播间所属版块ID
 	private Date created;		// 创建时间
+	private String moduleCode;		// 模块代码
+	private String moduleName;		// 模块名称
 	
 	public Room() {
 		super();
@@ -53,6 +56,15 @@ public class Room extends DataEntity<Room> {
 
 	public void setHeadImageUrl(String headImageUrl) {
 		this.headImageUrl = headImageUrl;
+	}
+	
+	@Length(min=0, max=20, message="房间编码长度必须介于 0 和 20 之间")
+	public String getRoomCode() {
+		return roomCode;
+	}
+
+	public void setRoomCode(String roomCode) {
+		this.roomCode = roomCode;
 	}
 	
 	@Length(min=0, max=200, message="直播间展示图片长度必须介于 0 和 200 之间")
@@ -109,11 +121,12 @@ public class Room extends DataEntity<Room> {
 		this.videoUrl = videoUrl;
 	}
 	
-	public Long getModuleId() {
+	@Length(min=0, max=20, message="直播间所属版块ID长度必须介于 0 和 20 之间")
+	public String getModuleId() {
 		return moduleId;
 	}
 
-	public void setModuleId(Long moduleId) {
+	public void setModuleId(String moduleId) {
 		this.moduleId = moduleId;
 	}
 	
@@ -125,6 +138,24 @@ public class Room extends DataEntity<Room> {
 
 	public void setCreated(Date created) {
 		this.created = created;
+	}
+	
+	@Length(min=0, max=20, message="模块代码长度必须介于 0 和 20 之间")
+	public String getModuleCode() {
+		return moduleCode;
+	}
+
+	public void setModuleCode(String moduleCode) {
+		this.moduleCode = moduleCode;
+	}
+	
+	@Length(min=0, max=200, message="模块名称长度必须介于 0 和 200 之间")
+	public String getModuleName() {
+		return moduleName;
+	}
+
+	public void setModuleName(String moduleName) {
+		this.moduleName = moduleName;
 	}
 	
 }

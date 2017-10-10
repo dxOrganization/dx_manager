@@ -4,7 +4,6 @@
 package com.thinkgem.jeesite.modules.dx.order.entity;
 
 import org.hibernate.validator.constraints.Length;
-import com.thinkgem.jeesite.modules.dx.memeber.entity.Memeber;
 import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import javax.validation.constraints.NotNull;
@@ -14,13 +13,13 @@ import com.thinkgem.jeesite.common.persistence.DataEntity;
 /**
  * 订单信息（充值）Entity
  * @author mzh143
- * @version 2017-10-09
+ * @version 2017-10-10
  */
 public class Order extends DataEntity<Order> {
 	
 	private static final long serialVersionUID = 1L;
 	private String orderNum;		// 订单编号
-	private Memeber memberId;		// 用户ID
+	private String memberId;		// 用户ID
 	private String paymentType;		// 付款方式
 	private String payment;		// 订单金额
 	private String type;		// 订单类型
@@ -43,11 +42,12 @@ public class Order extends DataEntity<Order> {
 		this.orderNum = orderNum;
 	}
 	
-	public Memeber getMemberId() {
+	@Length(min=0, max=20, message="用户ID长度必须介于 0 和 20 之间")
+	public String getMemberId() {
 		return memberId;
 	}
 
-	public void setMemberId(Memeber memberId) {
+	public void setMemberId(String memberId) {
 		this.memberId = memberId;
 	}
 	

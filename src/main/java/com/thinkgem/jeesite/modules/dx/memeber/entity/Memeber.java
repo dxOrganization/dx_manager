@@ -13,7 +13,7 @@ import com.thinkgem.jeesite.common.persistence.DataEntity;
 /**
  * 会员信息Entity
  * @author mzh143
- * @version 2017-10-09
+ * @version 2017-10-10
  */
 public class Memeber extends DataEntity<Memeber> {
 	
@@ -23,7 +23,7 @@ public class Memeber extends DataEntity<Memeber> {
 	private String type;		// 用户类型
 	private String source;		// 用户来源
 	private String headImageUrl;		// 用户头像
-	private Long channelId;		// 渠道
+	private String channelId;		// 渠道
 	private String channelName;		// 渠道名称
 	private String recommendUid;		// 推荐人
 	private String score;		// 用户积分
@@ -84,11 +84,12 @@ public class Memeber extends DataEntity<Memeber> {
 		this.headImageUrl = headImageUrl;
 	}
 	
-	public Long getChannelId() {
+	@Length(min=0, max=20, message="渠道长度必须介于 0 和 20 之间")
+	public String getChannelId() {
 		return channelId;
 	}
 
-	public void setChannelId(Long channelId) {
+	public void setChannelId(String channelId) {
 		this.channelId = channelId;
 	}
 	

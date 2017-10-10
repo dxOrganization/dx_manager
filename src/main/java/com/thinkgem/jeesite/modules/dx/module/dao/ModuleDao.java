@@ -10,7 +10,7 @@ import com.thinkgem.jeesite.modules.dx.module.entity.Module;
 /**
  * 版块信息维护DAO接口
  * @author mzh143
- * @version 2017-10-09
+ * @version 2017-10-10
  */
 @MyBatisDao
 public interface ModuleDao extends CrudDao<Module> {

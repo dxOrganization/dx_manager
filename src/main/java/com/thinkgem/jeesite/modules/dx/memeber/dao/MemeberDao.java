@@ -10,7 +10,7 @@ import com.thinkgem.jeesite.modules.dx.memeber.entity.Memeber;
 /**
  * 会员信息DAO接口
  * @author mzh143
- * @version 2017-10-09
+ * @version 2017-10-10
  */
 @MyBatisDao
 public interface MemeberDao extends CrudDao<Memeber> {

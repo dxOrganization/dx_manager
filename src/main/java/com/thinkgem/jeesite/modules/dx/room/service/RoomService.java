@@ -16,7 +16,7 @@ import com.thinkgem.jeesite.modules.dx.room.dao.RoomDao;
 /**
  * 直播间Service
  * @author mzh143
- * @version 2017-10-09
+ * @version 2017-10-10
  */
 @Service
 @Transactional(readOnly = true)

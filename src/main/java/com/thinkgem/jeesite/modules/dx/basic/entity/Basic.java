@@ -10,7 +10,7 @@ import com.thinkgem.jeesite.common.persistence.DataEntity;
 /**
  * 基础设置Entity
  * @author mzh143
- * @version 2017-10-09
+ * @version 2017-10-10
  */
 public class Basic extends DataEntity<Basic> {
 	
