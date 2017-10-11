@@ -2,6 +2,10 @@ package com.thinkgem.jeesite.test.service;
 
 import com.thinkgem.jeesite.common.persistence.Page;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+import com.thinkgem.jeesite.modules.act.utils.DateConverter;
+>>>>>>> Stashed changes
 =======
 import com.thinkgem.jeesite.modules.act.utils.DateConverter;
 >>>>>>> Stashed changes
@@ -54,7 +58,11 @@ public class ServiceTest {
     public void getRoomByModuleId() {
         Room room = new Room();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         room.setModuleId("1");
+=======
+        room.setModuleId(2L);
+>>>>>>> Stashed changes
 =======
         room.setModuleId(2L);
 >>>>>>> Stashed changes
@@ -68,7 +76,11 @@ public class ServiceTest {
     public void getRoomPageByModuleId() {
         Room room = new Room();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         room.setModuleId("3");
+=======
+        room.setModuleId(1L);
+>>>>>>> Stashed changes
 =======
         room.setModuleId(1L);
 >>>>>>> Stashed changes
