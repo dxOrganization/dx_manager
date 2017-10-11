@@ -46,13 +46,12 @@
 			<if test="city != null and city != ''">
 				AND a.city = #{city}
 			</if>
-<<<<<<< HEAD
+
 			<if test="moduleId != null and moduleId != ''">
 				AND a.module_id = #{moduleId}
-=======
+			</if>
 			<if test="moduleName != null and moduleName != ''">
 				AND a.module_name = #{moduleName}
->>>>>>> master
 			</if>
 		</where>
 		<choose>

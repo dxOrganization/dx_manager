@@ -1,7 +1,6 @@
 package com.thinkgem.jeesite.test.service;
 
 import com.thinkgem.jeesite.common.persistence.Page;
-import com.thinkgem.jeesite.modules.act.utils.DateConverter;
 import com.thinkgem.jeesite.modules.dx.module.entity.Module;
 import com.thinkgem.jeesite.modules.dx.module.service.ModuleService;
 import com.thinkgem.jeesite.modules.dx.room.entity.Room;
@@ -28,6 +27,7 @@ public class ServiceTest {
 
     @Autowired
     private ModuleService moduleService;
+
     @Test
     public void test08(){
         System.out.println("1111111-------- " + moduleService.toString());
@@ -49,7 +49,7 @@ public class ServiceTest {
     @Test
     public void getRoomByModuleId() {
         Room room = new Room();
-        room.setModuleId(2L);
+        room.setModuleId("1");
         List<Room> roomList = roomService.findList(room);
         for (Room r : roomList) {
             logger.info(r.getRoomName() + "----------->");
@@ -59,7 +59,7 @@ public class ServiceTest {
     @Test
     public void getRoomPageByModuleId() {
         Room room = new Room();
-        room.setModuleId(1L);
+        room.setModuleId("3");
         List<Room> roomList = roomService.findList(room);
 
         Page<Room> roomPage = new Page<>(3,6);
