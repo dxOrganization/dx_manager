@@ -1,7 +1,6 @@
 package com.thinkgem.jeesite.modules.dx.webutils;
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 import com.thinkgem.jeesite.modules.dx.room.entity.Room;
 import com.thinkgem.jeesite.modules.dx.room.service.RoomService;
 import org.slf4j.Logger;
@@ -28,10 +27,5 @@ public class IndexController {
         List<Room> roomList = roomService.findList(room);
         return roomList;
     }
-=======
-public class IndexController {
->>>>>>> Stashed changes
-=======
-public class IndexController {
->>>>>>> Stashed changes
+
 }
