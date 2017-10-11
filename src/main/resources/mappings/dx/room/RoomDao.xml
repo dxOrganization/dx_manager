@@ -46,6 +46,7 @@
 			<if test="city != null and city != ''">
 				AND a.city = #{city}
 			</if>
+<<<<<<< Updated upstream
 
 			<if test="moduleId != null and moduleId != ''">
 				AND a.module_id = #{moduleId}
@@ -53,6 +54,11 @@
 			<if test="moduleName != null and moduleName != ''">
 				AND a.module_name = #{moduleName}
 			</if>
+=======
+			<if test="moduleId != null and moduleId != ''">
+				AND a.module_id = #{moduleId}
+			</if>
+>>>>>>> Stashed changes
 		</where>
 		<choose>
 			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
